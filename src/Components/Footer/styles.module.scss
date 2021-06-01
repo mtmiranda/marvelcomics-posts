@@ -1,0 +1,31 @@
+.footerWrapper {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #f0141e;
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    & span {
+      margin-left: 50px;
+    }
+    & .imgLogoOld {
+      width: 35px;
+      height: 35px;
+    }
+
+    & .footerIconsWrapper {
+      display: flex;
+      & :nth-child(2) {
+        margin-left: 20px;
+      }
+      & .icon {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}
