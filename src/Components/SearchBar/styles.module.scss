@@ -1,0 +1,30 @@
+@import "../../Styles/globalStyles.scss";
+
+::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+
+::-moz-placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+
+.inputWrapper {
+  padding: 5px;
+  border: 3px solid #ff1722;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  margin-top: 20px;
+  .inputSearch {
+    background-color: #f0141e;
+    color: #fff;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding: 10px;
+    background-image: url("/imgs/loupe.svg");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 25px;
+    width: 225px;
+
+  }
+}
