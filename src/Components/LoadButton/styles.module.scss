@@ -1,0 +1,13 @@
+.buttonLoad {
+  width: 120px;
+  background: silver;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.buttonLoad:disabled {
+  background: #888;
+  cursor: not-allowed;
+}
