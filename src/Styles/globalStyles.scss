@@ -1,13 +1,45 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+//BREAKPOINTS
+$breakpoint-mb-small: 576px;
+$breakpoint-mb: 768px;
+$breakpoint-mb-large: 992px;
+$breakpoint-desk: 1368px;
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input,
+button {
+  outline: unset;
+  border: none;
+}
+
+html {
+  font-size: 100%;
+  color: black;
+  background: url("/imgs/body-background.png") center center fixed no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #e9ecef;
+
+  @media (max-width: 1080px) {
+    font-size: 93.75%;
+  }
+
+  @media (max-width: 720px) {
+    font-size: 87.5%;
+  }
+}
+
+body,
+input,
+button {
+  font-family: "Bangers", cursive;
+  font-weight: normal;
 }
