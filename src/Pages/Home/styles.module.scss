@@ -1,0 +1,39 @@
+@import "../../Styles/globalStyles.scss";
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  .headerContainer {
+    .searchContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 20px 0;
+      width: 100%;
+      margin: 0 auto;
+
+      @media (max-width: $breakpoint-mb-small) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .emptyComicsTitle {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  @media (min-width: $breakpoint-desk) {
+    max-width: $breakpoint-desk;
+    margin: 0 auto;
+  }
+
+  .loadButtonWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+  }
+}
