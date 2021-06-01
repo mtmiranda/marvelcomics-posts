@@ -1,0 +1,17 @@
+.hqWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: 1px solid black;
+  padding: 20px;
+  background: silver;
+  .hq {
+    .hqTitle {
+      margin-bottom: 20px;
+    }
+    img {
+      max-width: 223px;
+    }
+  }
+}
