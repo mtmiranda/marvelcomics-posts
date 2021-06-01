@@ -1,0 +1,20 @@
+.btnScrollTop {
+  position: fixed;
+  width: 48px;
+  left: calc(100% - 9%);
+  top: calc(100% - 22%);
+  height: 48px;
+  font-size: 4rem;
+  z-index: 1;
+  cursor: pointer;
+  animation: btnFade 0.5s ease-in-out;
+}
+
+@keyframes btnFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
