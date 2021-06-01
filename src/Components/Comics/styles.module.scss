@@ -1,0 +1,11 @@
+@import "../../Styles/globalStyles.scss";
+
+.comics {
+  display: grid;
+  align-items: end;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 35px;
+  margin: 20px auto;
+  max-width: 1024px;
+  padding: 0 20px;
+}
