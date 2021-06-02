@@ -1,0 +1,18 @@
+.registerContainer {
+  width: 100vw;
+  height: 100vh;
+  background: url("/imgs/login-register-bg.png") center center fixed no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #e9ecef;
+
+  .inputWrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
