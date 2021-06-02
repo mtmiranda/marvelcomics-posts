@@ -21,12 +21,12 @@ button {
 html {
   font-size: 100%;
   color: black;
-  background: url("/imgs/body-background.png") center center fixed no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-color: #e9ecef;
+  // background: url("/imgs/body-background.png") center center fixed no-repeat;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
+  // background-color: #e9ecef;
 
   @media (max-width: 1080px) {
     font-size: 93.75%;
