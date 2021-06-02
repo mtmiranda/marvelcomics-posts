@@ -1,0 +1,82 @@
+.loginContainer {
+  width: 100vw;
+  height: 100vh;
+  background: url("/imgs/login-register-bg.png") center center fixed no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #e9ecef;
+  .loginHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+
+    & .marvelLogo {
+      width: 150px;
+      margin-right: 10px;
+    }
+
+    & h1 {
+      font-size: 3rem;
+    }
+  }
+  .inputWrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: solid 7px #41403e;
+    background: transparent;
+    transition: all 0.5s ease;
+    letter-spacing: 1px;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding: 20px;
+
+    .inputWrapper:hover {
+      box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
+    }
+    .formTitle {
+      font-size: 2rem;
+    }
+
+    .formGroup {
+      margin: 5px 0;
+      display: flex;
+      flex-direction: column;
+
+      & label {
+        margin: 10px;
+      }
+
+      .formField {
+        padding: 5px;
+        border: 2px solid black;
+      }
+    }
+    .formError {
+      display: block;
+      font-size: small;
+      color: red;
+    }
+
+    .btnSubmit {
+      width: 100px;
+      background: #000;
+      font-size: small;
+      color: white;
+      border: 0 none;
+      border-radius: 1px;
+      cursor: pointer;
+      padding: 10px 5px;
+      margin: 10px 5px;
+      border-radius: 10px;
+    }
+
+    .btnSubmit:hover {
+      box-shadow: 0 0 0 2px white, 0 0 0 3px #86888a;
+    }
+  }
+}
