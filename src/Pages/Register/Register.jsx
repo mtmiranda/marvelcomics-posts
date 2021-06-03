@@ -5,6 +5,7 @@ import * as yup from "yup";
 import axios from "axios";
 import { history } from "../../Routes/history";
 
+import { Footer } from "../../Components/Footer";
 import styles from "./styles.module.scss";
 
 const Register = () => {
@@ -19,13 +20,24 @@ const Register = () => {
   };
 
   const validations = yup.object().shape({
+    firstName: yup.string().min(3, "Too Short!").max(50, "To Long!"),
+    lastName: yup.string().min(3, "Too Short!").max(50, "To Long!"),
     email: yup.string().email().required(),
     password: yup.string().min(8).required(),
   });
 
   return (
     <section className={styles.registerContainer}>
+      <header className={styles.registerHeader}>
+        <img
+          className={styles.marvelLogo}
+          src="/imgs/marvel-logo.svg"
+          alt="marvel logo"
+        />
+        <h1>Comics Posts</h1>
+      </header>
       <div className={styles.inputWrapper}>
+        <h1 className={styles.formTitle}>Register</h1>
         <Formik
           initialValues={{}}
           onSubmit={handleSubmit}
@@ -33,31 +45,37 @@ const Register = () => {
         >
           <Form className={styles.form}>
             <div className={styles.formGroup}>
-              <Field name="firstName" className={styles.formField} />
+              <label htmlFor="firstName">FirstName:</label>
+              <Field
+                name="firstName"
+                className={styles.formField}
+                type="text"
+              />
               <ErrorMessage
                 component="span"
                 name="firstName"
                 className={styles.formError}
               />
-            </div>
-            <div className={styles.formGroup}>
-              <Field name="lastName" className={styles.formField} />
+              <label htmlFor="lastName">LastName:</label>
+              <Field name="lastName" className={styles.formField} type="text" />
               <ErrorMessage
                 component="span"
                 name="lastName"
                 className={styles.formError}
               />
-            </div>
-            <div className={styles.formGroup}>
-              <Field name="email" className={styles.formField} />
+              <label htmlFor="email">Email:</label>
+              <Field name="email" className={styles.formField} type="email" />
               <ErrorMessage
                 component="span"
                 name="email"
                 className={styles.formError}
               />
-            </div>
-            <div className={styles.formGroup}>
-              <Field name="password" className={styles.formField} />
+              <label htmlFor="password">Password:</label>
+              <Field
+                name="password"
+                className={styles.formField}
+                type="password"
+              />
               <ErrorMessage
                 component="span"
                 name="password"
@@ -70,6 +88,7 @@ const Register = () => {
           </Form>
         </Formik>
       </div>
+      <Footer />
     </section>
   );
 };
