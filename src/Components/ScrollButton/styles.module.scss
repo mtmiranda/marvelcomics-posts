@@ -1,3 +1,5 @@
+@import "../../Styles/globalStyles.scss";
+
 .btnScrollTop {
   position: fixed;
   width: 48px;
@@ -8,6 +10,10 @@
   z-index: 1;
   cursor: pointer;
   animation: btnFade 0.5s ease-in-out;
+
+  @media (max-width: $breakpoint-mb) {
+    left: 50%;
+  }
 }
 
 @keyframes btnFade {
