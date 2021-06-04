@@ -21,6 +21,18 @@
       @media (max-width: $breakpoint-mb-small) {
         flex-direction: column;
       }
+
+      .rightHeaderBox {
+        display: flex;
+        align-items: baseline;
+      }
+
+      .logoutButton {
+        margin-left: 20px;
+        border: 1px solid red;
+        background: cadetblue;
+        cursor: pointer;
+      }
     }
   }
 

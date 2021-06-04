@@ -6,6 +6,7 @@ import Button from "../../Components/LoadButton";
 import { ScrollButton } from "../../Components/ScrollButton";
 import { SearchBar } from "../../Components/SearchBar";
 import useFullpageLoader from "../../Hooks/useFullpageLoader";
+import { history } from "../../Routes/history";
 
 // import loadComics from "../../Utils/loadComics.js";
 
@@ -28,7 +29,7 @@ const Home = () => {
 
   const handleLoadComics = useCallback(async (page, comicsPerPage) => {
     fetch(
-      `https://gateway.marvel.com/v1/public/comics?ts=${timeStamp}&apikey=${apiKey}&hash=${md5}&limit=100&offset=1000`
+      `https://gateway.marvel.com/v1/public/comics?ts=${timeStamp}&apikey=${apiKey}&hash=${md5}&limit=100&offset=500`
     )
       .then((response) => response.json())
       .then((jsonParsed) => {
@@ -62,6 +63,11 @@ const Home = () => {
     setSearchValue(value);
   };
 
+  const handleLogout = () => {
+    window.localStorage.clear();
+    history.push("/login");
+  };
+
   const noMoreComics = page + comicsPerPage >= allComics.length;
 
   const filteredComics = !!searchValue
@@ -84,7 +90,13 @@ const Home = () => {
             <img src="/imgs/marvel-logo.svg" alt="marvel logo" />
           </a>
           {!!searchValue && <p>Searching...: {searchValue}</p>}
-          <SearchBar searchValue={searchValue} handleChange={handleChange} />
+
+          <div className={styles.rightHeaderBox}>
+            <SearchBar searchValue={searchValue} handleChange={handleChange} />
+            <button className={styles.logoutButton} onClick={handleLogout}>
+              test
+            </button>
+          </div>
         </div>
       </header>
 
