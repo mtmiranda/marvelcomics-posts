@@ -36,9 +36,6 @@
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     padding: 20px;
 
-    .inputWrapper:hover {
-      box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
-    }
     .formTitle {
       font-size: 2rem;
     }
@@ -70,7 +67,6 @@
       color: white;
       border: 0 none;
       border-radius: 1px;
-      cursor: pointer;
       padding: 10px 5px;
       margin: 10px 5px;
       border-radius: 10px;
@@ -79,5 +75,9 @@
     .btnSubmit:hover {
       box-shadow: 0 0 0 2px white, 0 0 0 3px #86888a;
     }
+  }
+
+  .inputWrapper:hover {
+    box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
   }
 }
