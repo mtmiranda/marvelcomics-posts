@@ -94,7 +94,7 @@ const Home = () => {
           <div className={styles.rightHeaderBox}>
             <SearchBar searchValue={searchValue} handleChange={handleChange} />
             <button className={styles.logoutButton} onClick={handleLogout}>
-              test
+              Logout
             </button>
           </div>
         </div>
