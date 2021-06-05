@@ -1,6 +1,7 @@
 import React from "react";
 
-import { AccordionDetails, AccordionSummary } from "@material-ui/core";
+import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
+import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MuiAccordion from "@material-ui/core/Accordion";
 
@@ -14,6 +15,31 @@ const Accordion = withStyles({
   },
   expanded: {},
 })(MuiAccordion);
+
+const AccordionSummary = withStyles({
+  root: {
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    borderBottom: "1px solid rgba(0, 0, 0, .125)",
+    minHeight: 40,
+    "&$expanded": {
+      minHeight: 40,
+    },
+  },
+  content: {
+    "&$expanded": {
+      margin: "12px 0",
+    },
+  },
+  expanded: {},
+})(MuiAccordionSummary);
+
+const AccordionDetails = withStyles((theme) => ({
+  root: {
+    padding: theme.spacing(2),
+    display: "flex",
+    flexDirection: "column",
+  },
+}))(MuiAccordionDetails);
 
 export const Hq = ({ comic }) => {
   return (
@@ -39,16 +65,15 @@ export const Hq = ({ comic }) => {
             <p>Characters</p>
           </AccordionSummary>
           <AccordionDetails>
-            {comic.characters.items.map((item) => (
-              <p>
-                {console.log(item)}
-                {item.name.length !== 0 ? (
-                  item.name
-                ) : (
-                  <p>Not found in database</p>
-                )}
-              </p>
-            ))}
+            {comic.characters.available > 0 ? (
+              comic.characters.items.map((item) => (
+                <ul>
+                  <li style={{ marginLeft: "12px" }}>{item.name}</li>
+                </ul>
+              ))
+            ) : (
+              <p>Not found in api database</p>
+            )}
           </AccordionDetails>
         </Accordion>
       </div>
