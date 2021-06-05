@@ -10,6 +10,10 @@
   background-size: cover;
   background-color: #e9ecef;
   .headerContainer {
+    @media (min-width: $breakpoint-desk) {
+      max-width: $breakpoint-desk;
+      margin: 0 auto;
+    }
     .searchContainer {
       display: flex;
       align-items: center;
@@ -18,20 +22,44 @@
       width: 100%;
       margin: 0 auto;
 
+      & img {
+        width: 150px;
+      }
+
       @media (max-width: $breakpoint-mb-small) {
         flex-direction: column;
+
+        & p {
+          margin-top: 20px;
+        }
       }
 
       .rightHeaderBox {
         display: flex;
         align-items: baseline;
+
+        @media (max-width: $breakpoint-mb-small) {
+          flex-direction: column;
+        }
       }
 
       .logoutButton {
         margin-left: 20px;
-        border: 1px solid red;
-        background: cadetblue;
+        width: 100px;
+        background: #000;
+        font-size: small;
+        color: white;
+        border: 0 none;
         cursor: pointer;
+        padding: 10px 5px;
+        border-radius: 10px;
+
+        @media (max-width: $breakpoint-mb-small) {
+          margin: 20px auto auto;
+        }
+      }
+      .logoutButton:hover {
+        box-shadow: 0 0 0 2px white, 0 0 0 3px #86888a;
       }
     }
   }
@@ -43,14 +71,9 @@
     transform: translate(-50%, -50%);
   }
 
-  @media (min-width: $breakpoint-desk) {
-    max-width: $breakpoint-desk;
-    margin: 0 auto;
-  }
-
   .loadButtonWrapper {
     display: flex;
     justify-content: center;
-    margin-bottom: 70px;
+    padding-bottom: 70px;
   }
 }
