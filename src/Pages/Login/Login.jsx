@@ -10,15 +10,13 @@ import styles from "./styles.module.scss";
 
 const Login = () => {
   const handleSubmit = (values) => {
-    axios
-      .post("https://cors-anywhere.herokuapp.com/v1/api/auth", values)
-      .then((resp) => {
-        const { data } = resp;
-        if (data) {
-          localStorage.setItem("app-token", data);
-          history.push("/");
-        }
-      });
+    axios.post("http://localhost:8080/v1/api/auth", values).then((resp) => {
+      const { data } = resp;
+      if (data) {
+        localStorage.setItem("app-token", data);
+        history.push("/");
+      }
+    });
   };
 
   const validations = yup.object().shape({
