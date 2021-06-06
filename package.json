@@ -37,10 +37,11 @@
     "yup": "^0.32.9"
   },
   "scripts": {
-    "start": "node ./src/api/main.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "node ./src/api/main.js"
   },
   "eslintConfig": {
     "extends": "react-app"
