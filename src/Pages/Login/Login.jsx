@@ -11,10 +11,7 @@ import styles from "./styles.module.scss";
 const Login = () => {
   const handleSubmit = (values) => {
     axios
-      .post(
-        "https://agile-beach-75452.herokuapp.com/http://localhost:8080/v1/api/auth",
-        values
-      )
+      .post("https://cors-anywhere.herokuapp.com/v1/api/auth", values)
       .then((resp) => {
         const { data } = resp;
         if (data) {
