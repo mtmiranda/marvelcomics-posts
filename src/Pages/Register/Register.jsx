@@ -11,7 +11,10 @@ import styles from "./styles.module.scss";
 const Register = () => {
   const handleSubmit = (values) => {
     axios
-      .post("https://agile-beach-75452.herokuapp.com/v1/api/user", values)
+      .post(
+        "https://agile-beach-75452.herokuapp.com/http://localhost:8080/v1/api/user",
+        values
+      )
       .then((resp) => {
         const { data } = resp;
         if (data) {
