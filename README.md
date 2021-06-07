@@ -2,7 +2,11 @@
 
 ## Sobre
 
-Esse projeto foi criado com o intuito de aplicar meus conhecimentos no consumo de uma api externa (**Marvel Api**), constando com filtro de busca para listagem de quadrinhos e estilizações em Sass modules.
+Esse projeto foi criado com o intuito de aplicar meus conhecimentos no consumo de uma api externa (**Marvel Api**), constando com filtro de busca para listagem de quadrinhos, informações e personagens de cada HQ.
+
+urlsPaths: /(home), /login, /register
+
+OBS: Em Produção, retirei as rotas privadas por conta de CORS na autenticação (login/register), para melhor visualização do projeto recomendo clonar o repo e executar os comandos abaixo:
 
 ## **Start**
 
