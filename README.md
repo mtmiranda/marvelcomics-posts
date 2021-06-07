@@ -29,10 +29,10 @@ OBS: Caso algum erro de lifecycle, rode npm start mais de uma vez
 ## Imagens do projeto
 
 <p float="left">
-  <img src="https://www.mediafire.com/view/8y1a7pb1jig1as0/comic-home.PNG/file" width="220" height="220" />
-  <img src="https://www.mediafire.com/view/w05l4cihnricxxu/comic-login.PNG/file" width="200" height="220" />
-  <img src="https://www.mediafire.com/view/dpx25lxwioj4xce/comic-register.PNG/file" width="200" height="220"/> 
-  <img src="https://www.mediafire.com/view/ha24lemcy9l64yd/comic-responsive.PNG/file" width="200" height="220"/>
+  <img src="https://i.imgur.com/tGjRltX.png" width="220" height="220" />
+  <img src="https://i.imgur.com/BXKZ63F.png" width="200" height="220" />
+  <img src="https://i.imgur.com/K5WAAhq.png" width="200" height="220"/> 
+  <img src="https://i.imgur.com/8nfikHn.png" width="200" height="220"/>
 </p>
 
 ## Deploy (Heroku)
