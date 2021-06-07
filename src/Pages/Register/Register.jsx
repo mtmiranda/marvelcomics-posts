@@ -8,11 +8,11 @@ import { history } from "../../Routes/history";
 import { Footer } from "../../Components/Footer";
 import styles from "./styles.module.scss";
 
-// const baseUrl = process.env.baseURL || "http://localhost:8080";
+const baseUrl = process.env.baseURL || "http://localhost:8080";
 
 const Register = () => {
   const handleSubmit = (values) => {
-    axios.post(`${process.env.baseURL}/v1/api/user`, values).then((resp) => {
+    axios.post(`${baseUrl}/v1/api/user`, values).then((resp) => {
       const { data } = resp;
       if (data) {
         localStorage.setItem("app-token", data);
