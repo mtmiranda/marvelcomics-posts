@@ -8,17 +8,17 @@ import { history } from "../../Routes/history";
 import { Footer } from "../../Components/Footer";
 import styles from "./styles.module.scss";
 
+const baseUrl = process.env.baseURL || "http://localhost:8080";
+
 const Login = () => {
   const handleSubmit = (values) => {
-    axios
-      .post("https://agile-beach-75452.herokuapp.com/v1/api/auth", values)
-      .then((resp) => {
-        const { data } = resp;
-        if (data) {
-          localStorage.setItem("app-token", data);
-          history.push("/");
-        }
-      });
+    axios.post(`${baseUrl}/v1/api/auth`, values).then((resp) => {
+      const { data } = resp;
+      if (data) {
+        localStorage.setItem("app-token", data);
+        history.push("/");
+      }
+    });
   };
 
   const validations = yup.object().shape({

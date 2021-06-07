@@ -8,8 +8,6 @@ const app = new Koa();
 const router = new Router();
 
 module.exports = () => {
-  console.log("[Koa] Creating a new server...");
-
   applyRoutes(router);
 
   app
@@ -18,5 +16,9 @@ module.exports = () => {
     .use(router.routes())
     .use(router.allowedMethods());
 
-  app.listen(8080);
+  const port = process.env.PORT || 8080;
+
+  app
+    .listen(port)
+    .on("listening", () => console.log(`Listening on port ${port}`));
 };
