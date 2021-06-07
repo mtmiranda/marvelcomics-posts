@@ -7,17 +7,29 @@ const cors = require("@koa/cors");
 const app = new Koa();
 const router = new Router();
 
-var corsOptions = {
-  origin: "http://localhost:8080",
-  optionsSuccessStatus: 200,
-  methods: "GET, PUT, POST",
+const allowlist = ["https://marvelcomics-posts.herokuapp.com"];
+
+const corsOptionsDelegate = (req, callback) => {
+  let corsOptions;
+
+  let isDomainAllowed = allowlist.indexOf(req.header("Origin")) !== -1;
+  let isExtensionAllowed = req.path.endsWith(".jpg");
+
+  if (isDomainAllowed && isExtensionAllowed) {
+    // Enable CORS for this request
+    corsOptions = { origin: true };
+  } else {
+    // Disable CORS for this request
+    corsOptions = { origin: false };
+  }
+  callback(null, corsOptions);
 };
 
 module.exports = () => {
   applyRoutes(router);
 
   app
-    .use(cors(corsOptions))
+    .use(cors(corsOptionsDelegate))
     .use(bodyParser())
     .use(router.routes())
     .use(router.allowedMethods());
