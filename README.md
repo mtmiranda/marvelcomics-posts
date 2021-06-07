@@ -6,7 +6,10 @@ Esse projeto foi criado com o intuito de aplicar meus conhecimentos no consumo d
 
 urlsPaths: /(home), /login, /register
 
-OBS: Em Produção, retirei as rotas privadas por conta de CORS na autenticação (login/register), para melhor visualização do projeto recomendo clonar o repo e executar os comandos abaixo:
+OBS: Em Produção, para melhor visualização do projeto e acesso ao sistema, por conta do CORS, o servidor precisará estar rodando localmente para autenticação ao banco sqlite3.
+Por isso recomendo clonar o repositório e rodar "npm run server" para produção, os demais comandos abaixo servem para DEV:
+
+Primeiro registre-se e acesse o sistema
 
 ## **Start**
 
